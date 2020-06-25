@@ -1,0 +1,262 @@
+:root {
+    box-sizing: border-box;
+
+    --color-primary: #2A2B40;
+    --color-purple: #685BF2;
+    --color-white: #FFFFFF;
+    --color-purple_dark: #0F136A;
+    --color-purple_light: #74769E;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 0.83em;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-primary);
+}
+
+@media (max-width: 1080px) {
+    body{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 515px) {
+    body{
+        font-size: 0.8rem;
+    }
+}
+
+.container{
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+/* NAVIGATION */
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 2em 0;
+    position: relative;
+}
+
+.logo{
+    height: 2.6rem;
+    margin-right: 2.5em;
+    position: relative;
+    bottom: 7px;
+}
+.menu--items{
+    width: 100%;
+    display: flex;
+    list-style-type: none;
+}
+
+@media (max-width: 1080px) {
+    .menu--items{
+        display: none;
+        position: absolute;
+        padding-top: 6em;
+        top: 0;
+        right: 0;
+        margin: 0;
+        z-index: 200;
+        background-color: #FFFFFF;
+        height: 100vh;
+    }
+
+    nav.is-open .menu--items{
+        display: block;
+    }
+
+    .menu--item{
+        margin-bottom: 1em;
+    }
+
+    .menu--link{
+        text-align: center;
+    }
+}
+
+.nav-right{
+    margin-left: auto;
+}
+
+.menu--link{
+    display: block;
+    color: var(--color-purple_dark);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 1em 1.4em;
+}
+
+.menu--toggle{
+    position: absolute;
+    right: 0.1em;
+    z-index: 300;
+    
+    border: 0;
+    background-color: transparent;
+
+    font-size: 3em;
+    width: 0.8em;
+    height: 1.4em;
+    line-height: 0.4em;
+    text-indent: 5em;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 1080px) {
+    .logo{
+        height: 3em;
+    }
+
+    .menu--toggle{
+        display: block;
+    }
+}
+
+.menu--toggle::after{
+    position: absolute;
+    top: 0.3em;
+    right: 0.2em;
+    display: block;
+    content: "\2261";
+    text-indent: 0;
+}
+
+
+/* HERO */
+.hero{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.hero--left{
+    flex: 55;
+}
+
+.hero--headline{
+    font-size: 3.8rem;
+    margin: 2.5rem 0 2rem;
+    line-height: 1.4;
+}
+
+.hero--subheadline{
+    font-family: 'Raleway', sans-serif;
+    color: var(--color-purple_light);
+    line-height: 1.7;
+    letter-spacing: 0.05em;
+    width: 75%;
+    margin-bottom: 3.5rem;
+}
+
+.button{
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    border-radius: 3em;
+    padding: 1em 2em;
+}
+
+.button--primary{
+    background-color: var(--color-purple);
+    color: var(--color-white);
+}
+
+.button--secondary{
+    color: var(--color-purple);
+    border: var(--color-purple) 2px solid;
+    margin-left: 2em;
+}
+
+.hero--right{
+    flex: 45;
+    position: relative;
+}
+
+.hero--img{
+    width: 95%;
+    margin-top: 0.9em;
+    position: absolute;
+    right: 0;
+}
+
+@media (max-width: 1080px) {
+    .hero{
+        flex-direction: column;
+    }
+
+    .hero--headline{
+        font-size: 3.5em;
+        text-align: center;
+        margin-top: 0.5em;
+    }
+
+    .hero--subheadline{
+        width: 85%;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .cta{
+        text-align: center;
+    }
+
+    .button--secondary{
+        margin-left: 1em;
+    }
+
+    .hero--right{
+        margin-top: 4em;
+    }
+
+    .hero--img{
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 515px) {
+    .hero--headline{
+        font-size: 2.5rem;
+        margin-top: 1rem;
+    }
+
+    .hero--subheadline{
+        display: none;
+    }
+
+    .button{
+        display: block;
+        margin: 1em auto;
+        width: 70%;
+    }
+
+    .hero--img{
+        width: 100%;
+        top: -2rem;
+    }
+}
