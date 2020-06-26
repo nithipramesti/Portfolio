@@ -16,15 +16,17 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#">Resume</a></li>
+                    <li><a href="#about" class="menu-link">About</a></li>
+                    <li><a href="#projects" class="menu-link">Projects</a></li>
+                    <li><a href="#contact" class="menu-link">Contact</a></li>
+                    <li><a href="#" class="menu-link">Resume</a></li>
                 </ul>
+
+                <button class="menu--toggle" id="toggle-menu">menu</button>
             </nav>
         </header>
         <div id="hero">
-            <div id="hero-box">
+            <div id="hero-text">
                 <h1 id="title">
                     <span>Hello, I'm Nithi.</span> <br>I'm a brand designer & web developer.
                 </h1>
@@ -34,84 +36,106 @@
             </div>
             <img src="img/profil-pict-portfolio.png" alt="" id="profil-pict">
         </div>
-        <div id="content">
-            <div id="about">
-                <h2>About Me</h2>
-                <div id="about-text">
-                    <p>
-                        Hi, I am a freelancer brand designer and front-end web developer based in Bali, Indonesia. I have passion in graphic design and coding. My goal is to always design and build products that aesthetically pleasing, clean, and clear.
-                    </p>
-                    <p>
-                        I'm looking for new opportunities to develop my career in website design & development.
-                    </p>
-                    <p>
-                        Here are few technologies I've been working with recently:
-                    </p>
-                    <div id="bullet">
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Bootstrap</li>
-                            <li>JavaScript</li>
-                        </ul>
-                        <ul>
-                            <li>Adobe XD</li>
-                            <li>Adobe Photoshop</li>
-                            <li>Adobe Illustrator</li>
-                            <li>Adobe InDesign</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div id="projects">
-                <h2>Projects</h2>
-                <div id="project-cards">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <a href="#">
-                                <img src="img/p1.png" alt="">
-                            </a>
-                        </div>
-                        <div class="project-text">
-                            <a href="#"><h3>Homepage for forent.com</h3></a>
-                            <p class="subtitle">Design & Front-end Development</p>
-                            <a href="https://github.com/nithipramesti/forent.com" target="_blank"><p class="project-github">GitHub</p></a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-img">
-                            <a href="/travelCo/">
-                                <img src="img/p2.png" alt="">
-                            </a>
-                        </div>
-                        <div class="project-text">
-                            <a href="#"><h3>Sign in page for Travel Co</h3></a>
-                            <p class="subtitle">Design & Front-end Development</p>
-                            <a href="https://github.com/nithipramesti/Travel-Co---Sign-in-Page" target="_blank"><p class="project-github">GitHub</p></a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-img">
-                            <a href="/idata/" target="_blank">
-                                <img src="img/p3.png" alt="">
-                            </a>
-                        </div>
-                        <div class="project-text">
-                            <a href="#"><h3>Homepage for idata</h3></a>
-                            <p class="subtitle">Front-end Development</p>
-                            <a href="https://github.com/nithipramesti/idata" target="_blank"><p class="project-github">GitHub</p></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="contact">
-                <h2>Get in touch</h2>
-                <p><a href="mailto:mail@nithipramesti.com" target="_blank">mail@nithipramesti.com</a><p>
-                <p><a href="http://linkedin.com/in/nithipramesti" target="_blank">linkedin.com/in/nithipramesti</a></p>
-                <p><a href="https://www.instagram.com/nithipramesti/" target="_blank">@nithipramesti</a></p>
+
+        <div id="about">
+            <h2>About Me</h2>
+            <div id="about-text">
+                <p>
+                    Hi, I am a freelancer brand designer and front-end web developer based in Bali, Indonesia. I have passion in graphic design and coding. My goal is to always design and build products that aesthetically pleasing, clean, and clear.
                 </p>
+                <p>
+                    I'm looking for new opportunities to develop my career in website design & development.
+                </p>
+                <p>
+                    Here are few technologies I've been working with recently:
+                </p>
+                <div id="bullet">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Bootstrap</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <ul>
+                        <li>Adobe XD</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe InDesign</li>
+                    </ul>
+                </div>
             </div>
         </div>
+
+        <div id="projects">
+            <h2>Projects</h2>
+            <div id="project-cards">
+                <div class="project-card">
+                    <div class="project-img">
+                        <a href="#">
+                            <img src="img/p1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="project-text">
+                        <a href="#"><h3>Homepage for forent.com</h3></a>
+                        <p class="subtitle">Design & Front-end Development</p>
+                        <a href="https://github.com/nithipramesti/forent.com" target="_blank"><p class="project-github">GitHub</p></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <a href="/travelCo/" target="_blank">
+                            <img src="img/p2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="project-text">
+                        <a href="#"><h3>Sign in page for Travel Co</h3></a>
+                        <p class="subtitle">Design & Front-end Development</p>
+                        <a href="https://github.com/nithipramesti/Travel-Co---Sign-in-Page" target="_blank"><p class="project-github">GitHub</p></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <a href="/idata/" target="_blank">
+                            <img src="img/p3.png" alt="">
+                        </a>
+                    </div>
+                    <div class="project-text">
+                        <a href="#"><h3>Homepage for idata</h3></a>
+                        <p class="subtitle">Front-end Development</p>
+                        <a href="https://github.com/nithipramesti/idata" target="_blank"><p class="project-github">GitHub</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact">
+            <h2>Get in touch</h2>
+            <p><a href="mailto:mail@nithipramesti.com" target="_blank">mail@nithipramesti.com</a><p>
+            <p><a href="http://linkedin.com/in/nithipramesti" target="_blank">linkedin.com/in/nithipramesti</a></p>
+            <p><a href="https://www.instagram.com/nithipramesti/" target="_blank">@nithipramesti</a></p>
+            </p>
+        </div>
     </div>
+
+
+    <script type="text/javascript">
+        (function() {
+            const button = document.getElementById('toggle-menu');
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                const nav = document.querySelector('nav');
+                nav.classList.toggle('is-open');
+            })
+
+            const menu = document.querySelectorAll('.menu-link');
+            for (let a of menu){
+                a.addEventListener('click', function(event) {
+                const nav = document.querySelector('nav');
+                nav.classList.toggle('is-open');
+            })
+            }
+
+        })();
+    </script>
 </body>
 </html>

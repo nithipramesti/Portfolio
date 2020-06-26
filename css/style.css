@@ -1,3 +1,7 @@
+:root{
+    box-sizing: border-box;
+}
+
 *,
 *::after,
 *::before{
@@ -7,7 +11,6 @@
 }
 
 body{
-    box-sizing: border-box;
     font-family: 'Roboto';
     font-size: 15px;
     letter-spacing: 0.3px;
@@ -16,11 +19,35 @@ body{
 }
 
 #container{
-    width: 1128px;
+    width: 930px;
     margin: 0 auto;
 
 }
 
+@media (max-width:930px){
+    html, body{
+        font-size: 18px;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    #container{
+        width: 550px;
+    }
+}
+
+@media (max-width:600px){
+    body{
+        font-size: 16px;
+    }
+
+    #container{
+        width: 260px;
+    }
+}
+
+/* HEADER
+====================================== */
 header{
     position: relative;
     height: 100px;
@@ -57,21 +84,93 @@ nav a:hover{
     border-bottom: 1.5px #6F50FF solid;
 }
 
+.menu--toggle{
+    position: absolute;
+    right: 0.1em;
+    z-index: 300;
+    
+    border: 0;
+    background-color: transparent;
+
+    font-size: 40px;
+    width: 20px;
+    height: 30px;
+    line-height: 0.4em;
+    text-indent: 5em;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    display: none;
+    outline: none;
+}
+
+.menu--toggle::after{
+    position: absolute;
+    top: 5px;
+    right: 0;
+    display: block;
+    content: "\2261";
+    text-indent: 0;
+}
+
+@media (max-width:930px){
+    header{
+        padding-top: 30px;
+    }
+
+    #logo img{
+        width: 33px;
+    }
+
+    .menu--toggle{
+        display: block;
+    }
+
+    nav ul{
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 60%;
+        padding: 150px 0 0 30px;
+        background-color: #ececec;
+    }
+
+    nav ul li{
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    nav.is-open ul{
+        display: block;
+    }
+}
+
+@media (max-width:600px){
+    nav ul{
+        width: 70%;
+        padding: 100px 0 0 10px;
+    }
+    nav ul li{
+        margin-bottom: 30px;
+    }
+}
+
+
+/* HERO
+====================================== */
 #hero{
     display: flex;
+    width: 100%;
 }
 
 #profil-pict{
-    float: right;
     width: 600px;
-    height: 100%;
-    padding-top: 30px;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0px;
+    margin-top: 30px;
 }
 
-#hero-box{
+#hero-text{
     padding-top: 100px;
 }
 
@@ -79,7 +178,7 @@ nav a:hover{
     width: 530px;
     font-family: 'Poppins';
     font-size: 46px;
-    line-height: 58px;
+    line-height: 1.2;
 }
 
 #title span{
@@ -115,8 +214,51 @@ nav a:hover{
     margin: 0 auto;
 }
 
+@media (max-width:930px){
+    #hero{
+        display: unset;
+    }
+    
+    #hero-text{
+        padding-top: 40px;
+    }
+
+    #btn-primary a{
+        margin-top: 40px;
+    }
+
+    #profil-pict{
+        padding-top: 0;
+    }
+}
+
+@media (max-width:600px){
+    #hero-text{
+        padding-top: 10px;
+    }
+
+    #title{
+        width: 100%;
+        font-size: 32px;
+    }
+
+    #btn-primary a{
+        font-size: 15px;
+        padding: 12px 28px;
+    }
+
+    #profil-pict{
+        width: 180%;
+        margin: -25px 0 0 -65px;
+        position: relative;
+        z-index: -1;
+    }
+}
+
+/* ABOUT
+====================================== */
 #about{
-    padding-top: 150px;
+    top: 200px;
     display: flex;
     position: relative;
     height: 500px;
@@ -155,6 +297,27 @@ h2{
     color: #6F50FF;
 }
 
+@media (max-width:930px){
+    #about{
+        top: 100px;
+        display: unset;
+    }
+
+    #about-text{
+        position: relative;
+        width: 100%;
+    }
+}
+
+@media (max-width:600px){
+    #bullet{
+        font-size: 13px;
+    }
+}
+
+
+/* PROJECTS
+====================================== */
 #projects{
     width: 100%;
     margin-top: 50px;
@@ -174,7 +337,7 @@ h2{
 
 .project-card{
     height: 410px;
-    width: 290px;
+    width: 100%;
     background-color: #FFFFFF;
     border-radius: 7px;
     box-shadow: 0px 6px 8px 0px rgba(0,0,0,0.06);
@@ -183,15 +346,21 @@ h2{
 }
 
 .project-img{
-    width: 290px;
-    height: 290px;
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 7px 7px 0 0;
     overflow: hidden;
+    position: relative;
 }
 
 .project-card img{
-    width: 290px;
+    width: 100%;
     height: auto;
-    border-radius: 7px 7px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     transition: 0.2s;
 }
 
@@ -228,6 +397,59 @@ h2{
     color: #6F50FF;
 }
 
+@media (max-width:930px){
+    #projects{
+        margin-top: 70px;
+    }
+
+    #project-cards{
+        display: unset;
+    }
+
+    .project-card{
+        height: 700px;
+    }
+
+    .project-card h3{
+        font-size: 22px;
+    }
+
+    .project-card .subtitle{
+        font-size: 16px;
+    }
+
+    .project-github{
+        font-size: 14px;
+        margin-top: 35px;
+    }
+}
+
+@media (max-width:600px){
+    .project-card{
+        height: 380px;
+    }
+
+    .project-text{
+        padding: 25px 20px;
+    }
+
+    .project-card h3{
+        font-size: 16px;
+    }
+
+    .project-card .subtitle{
+        font-size: 13px;
+    }
+
+    .project-github{
+        font-size: 13px;
+        margin-top: 15px;
+    }
+}
+
+
+/* CONTACT
+====================================== */
 #contact{
     margin-top: 50px;
     padding-top: 150px;
@@ -245,4 +467,16 @@ h2{
 
 #contact a:hover{
     color: #6F50FF;
+}
+
+@media (max-width:930px){
+    #contact h2{
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width:600px){
+    #contact{
+        padding-top: 100px;
+    }
 }
